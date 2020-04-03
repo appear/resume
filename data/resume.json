@@ -1,0 +1,44 @@
+{
+  "title": "",
+  "subTitle": "",
+  "author": "",
+  "Introduce": "",
+  "contacts": {
+    "github": "",
+    "phone": "",
+    "mail": "",
+    "blog": ""
+  },
+  "careers": [
+    {
+      "name": "",
+      "summary": "",
+      "department": "",
+      "start_date": "",
+      "ent_date": "",
+      "position": "",
+      "projects": [
+        {
+          "name": "",
+          "start_date": "",
+          "end_date": "",
+          "summary": "",
+          "link": "",
+          "experiences": [],
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "name": "",
+      "contents": [
+        {
+          "title": "",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

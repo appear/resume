@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "esnext",
+    "strict": true,
+    "outDir": "dist",
+    "lib": ["dom", "es2017"],
+    "allowJs": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": ["node_modules"],
+  "include": ["./src/**/*"]
+}
