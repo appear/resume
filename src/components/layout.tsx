@@ -1,32 +1,35 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import steyld from 'styled-components'
 
 import SEO from './seo'
 import ResetStyle from './reset-style'
+import getMetaData from './utils/get-meta-data'
+
+const Conatiner = steyld.div`
+  max-width: 768px;
+  width: 100%;  
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: 1024px;
+  }
+`
 
 interface LayoutProps {
   children: React.ReactNode
   location: Location
 }
 
-const Layout = ({ children, location }: LayoutProps) => {
-  const { pathname } = location
-
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ({ children }: LayoutProps) => {
+  const { title, subTitle } = getMetaData()
 
   return (
     <>
       <ResetStyle />
-      <SEO title={data.site.siteMetadata.title} />
-      <div>{children}</div>
+      <SEO title={title} subTitle={subTitle} />
+      <Conatiner>{children}</Conatiner>
     </>
   )
 }

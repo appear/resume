@@ -1,9 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
 
 interface HeadProps {
-  description?: string
+  subTitle?: string
   lang?: string
   meta?: any[]
   title: string
@@ -11,38 +10,23 @@ interface HeadProps {
 }
 
 export default function Head({
-  description,
   lang = 'ko',
   meta = [],
   keywords = [],
   title,
+  subTitle,
 }: HeadProps) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-          }
-        }
-      }
-    `,
-  )
-
-  const metaDescription = description || site.siteMetadata.description
-
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${title}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: subTitle,
         },
         {
           property: `og:title`,
@@ -50,7 +34,7 @@ export default function Head({
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: subTitle,
         },
         {
           property: `og:type`,
@@ -66,7 +50,7 @@ export default function Head({
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: subTitle,
         },
         {
           name: 'og:type',

@@ -12,7 +12,6 @@
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-plugin-styled-components": "^3.1.20",
-    "gatsby-plugin-typegen": "^1.1.1",
     "gatsby-plugin-typescript": "^2.1.27",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-json": "^2.2.28",

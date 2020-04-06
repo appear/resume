@@ -1,13 +1,12 @@
-const config = require('./data/resume.json')
-
 module.exports = {
   siteMetadata: {
-    title: config.title,
-    description: config.subTitle,
+    title: 'Title',
+    subTitle: 'SubTitle',
+    author: 'Author',
+    introduce: 'Introduce',
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-typegen`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
