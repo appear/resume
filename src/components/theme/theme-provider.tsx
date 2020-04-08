@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 
 import whiteTheme from './white'
 import darkTheme from './dark'
+import { Theme } from './types'
 
 interface ThemeContext {
   isDark: boolean

@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import SEO from './seo'
 import ResetStyle from './reset-style'
@@ -12,6 +13,16 @@ interface LayoutProps {
   location: Location
 }
 
+const ContentContainer = styled.div`
+  box-sizing: border-box;
+  height: 100vh;
+
+  ${({ theme }) => `
+    background-color: ${theme.color.backgroundColor};
+    color: ${theme.color.text};
+  `}
+`
+
 const Layout = ({ children }: LayoutProps) => {
   const { title, subTitle } = getMetaData()
 
@@ -20,8 +31,10 @@ const Layout = ({ children }: LayoutProps) => {
       <ResetStyle />
       <SEO title={title} subTitle={subTitle} />
       <ThemeProvider>
-        <Navbar />
-        <Container>{children}</Container>
+        <ContentContainer>
+          <Navbar />
+          <Container>{children}</Container>
+        </ContentContainer>
       </ThemeProvider>
     </>
   )

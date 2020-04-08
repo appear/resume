@@ -7,16 +7,13 @@ interface ContainerProps {
 }
 
 export default steyld.div<ContainerProps>`
-  max-width: 768px;
-  width: 100%;  
+  max-width: 860px;
+  width: 100%;
+  height: 100%;  
   padding: 0 20px;
   box-sizing: border-box;
   margin: 0 auto;
 
   ${({ overflow }) => overflow && `overflow: ${overflow};`}
   ${({ position }) => position && `position: ${position};`}
-
-  @media (min-width: 768px) {
-    max-width: 1024px;
-  }
 `

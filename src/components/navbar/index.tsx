@@ -2,20 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Container from '../shared/container'
-import NightSky from './night-sky'
 import { useThemeContext } from '../theme/theme-provider'
+import getMetaData from '../utils/get-meta-data'
 
-const NavbarFrame = styled.div`
-  position: relative;
-  height: 150px;
-  background: ${({ theme }) => theme.color.navbar.backgroundColor};
-`
-const NavbarContainer = styled(Container)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+const NavbarFrame = styled(Container)`
+  height: 72px;
 `
 
 const ThemeButton = styled.button`
@@ -27,16 +18,14 @@ const ThemeButton = styled.button`
 
 function Navbar() {
   const { isDark, setIsDark } = useThemeContext()
+  const { title } = getMetaData()
+
   return (
-    <NavbarFrame>
-      {isDark ? <NightSky /> : null}
-      <NavbarContainer>
-        <Container position="relative">
-          <ThemeButton onClick={() => setIsDark(!isDark)}>
-            {isDark ? '🌙' : '🔆'}
-          </ThemeButton>
-        </Container>
-      </NavbarContainer>
+    <NavbarFrame position="relative">
+      {title}
+      <ThemeButton onClick={() => setIsDark(!isDark)}>
+        {isDark ? '🌙' : '🔆'}
+      </ThemeButton>
     </NavbarFrame>
   )
 }

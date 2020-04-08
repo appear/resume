@@ -1,7 +1,13 @@
-export default {
+import { Theme } from './types'
+import common from './common'
+
+const theme: Theme = {
+  ...common,
   color: {
-    navbar: {
-      backgroundColor: '#ffee89',
-    },
+    backgroundColor: '#fff',
+    text: '#3a3a3a',
+    link: '#368fff',
   },
 }
+
+export default theme
