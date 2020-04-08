@@ -9,11 +9,12 @@ const Context = createContext({
 })
 
 export default function ThemeProviderWrapper({
-  chilren,
-}: {
-  chilren: React.ReactNode
-}) {
-  const [isDark, setIsDark] = useState(false)
+  children,
+  initialTheme = false,
+}: React.PropsWithChildren<{
+  initialTheme?: boolean
+}>) {
+  const [isDark, setIsDark] = useState(initialTheme)
 
   const value = useMemo(
     () => ({
@@ -26,7 +27,7 @@ export default function ThemeProviderWrapper({
   return (
     <Context.Provider value={value}>
       <ThemeProvider theme={isDark ? darkTheme : whiteTheme}>
-        {chilren}
+        {children}
       </ThemeProvider>
     </Context.Provider>
   )

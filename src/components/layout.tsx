@@ -5,6 +5,7 @@ import ResetStyle from './reset-style'
 import getMetaData from './utils/get-meta-data'
 import Container from './shared/container'
 import Navbar from './navbar'
+import ThemeProvider from './theme/theme-provider'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -18,8 +19,10 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <ResetStyle />
       <SEO title={title} subTitle={subTitle} />
-      <Navbar />
-      <Container>{children}</Container>
+      <ThemeProvider>
+        <Navbar />
+        <Container>{children}</Container>
+      </ThemeProvider>
     </>
   )
 }
