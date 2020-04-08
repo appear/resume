@@ -1,7 +1,7 @@
 export default {
   color: {
     navbar: {
-      backgroundColor: '#c2eaff',
+      backgroundColor: '#4a4a4a',
     },
   },
 }

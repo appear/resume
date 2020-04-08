@@ -5,8 +5,14 @@ import { ThemeProvider } from 'styled-components'
 import whiteTheme from './white'
 import darkTheme from './dark'
 
-const Context = createContext({
+interface ThemeContext {
+  isDark: boolean
+  setIsDark: (value: boolean) => void
+}
+
+const Context = createContext<ThemeContext>({
   isDark: false,
+  setIsDark: () => {},
 })
 
 export default function ThemeProviderWrapper({
@@ -17,7 +23,7 @@ export default function ThemeProviderWrapper({
 }>) {
   const [isDark, setIsDark] = useState(initialTheme)
 
-  const value = useMemo(
+  const value: ThemeContext = useMemo(
     () => ({
       isDark,
       setIsDark,
