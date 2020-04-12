@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Resume Base Gatsby',
     introduce:
-      '3년차 프로튼엔드 개발자입니다. 가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사',
+      '3년차 프로튼엔드 개발자입니다. 개발에 집중 할 수 있는 환경을 좋아합니다. 빠르게 변화되는 환경을 두려워하지 않습니다.',
   },
   plugins: [
     `gatsby-plugin-styled-components`,

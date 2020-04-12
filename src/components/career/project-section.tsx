@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Container from '../shared/container'
 import Text from '../shared/text'
 import Badge from '../shared/badge'
+import media from '../shared/media'
 import { Project } from '../types'
 import { formatDate } from './utils'
 
@@ -11,6 +12,10 @@ const ProjectFrame = styled(Container)`
   display: inline-block;
   vertical-align: top;
   width: 65%;
+
+  @media ${media.mo} {
+    width: 100%;
+  }
 `
 
 const ProjectContainer = styled.div`

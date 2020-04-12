@@ -19,7 +19,7 @@ export default function Career() {
   return (
     <Container>
       <Text size={5} bold margin="40px 0 30px 0">
-        📝 경력
+        경력
       </Text>
       {careers.map(
         ({ name, start_date, end_date, position, summary, projects }, idx) => (

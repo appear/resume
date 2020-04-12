@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Container from '../shared/container'
 import Text from '../shared/text'
+import media from '../shared/media'
 import { formatDate } from './utils'
 import { Career } from '../types'
 
@@ -10,6 +11,12 @@ const CompanyContainer = styled(Container)<{ full: boolean }>`
   display: inline-block;
   vertical-align: top;
   width: ${({ full }) => (full ? 100 : 35)}%;
+
+  @media ${media.mo} {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
 `
 
 export default function CompanySection({

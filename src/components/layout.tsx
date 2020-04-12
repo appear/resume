@@ -15,8 +15,8 @@ interface LayoutProps {
 
 const ContentContainer = styled.div`
   box-sizing: border-box;
-  height: 100vh;
   transition: background ease 0.5s 0s;
+  padding-bottom: 100px;
 
   ${({ theme }) => `
     background-color: ${theme.color.background_color};
