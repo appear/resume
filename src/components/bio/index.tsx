@@ -24,7 +24,7 @@ export default function Bio() {
   return (
     <Container>
       <TextContainer>
-        <Text size={5} margin="0 0 5px 0" bold>
+        <Text size={6} margin="0 0 5px 0" bold>
           {name}
         </Text>
         {job_search && <Badge>구직중</Badge>}

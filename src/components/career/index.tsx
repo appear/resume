@@ -11,32 +11,21 @@ export default function Career() {
 
   return (
     <Container>
-      <Text size={5} bold>
-        경력
+      <Text size={5} bold margin="40px 0 30px 0">
+        📝 경력
       </Text>
       {careers.map(
-        (
-          {
-            name,
-            start_date,
-            end_date,
-            department,
-            position,
-            summary,
-            projects,
-          },
-          idx,
-        ) => (
+        ({ name, start_date, end_date, position, summary, projects }, idx) => (
           <Container key={idx}>
             <CompanySection
               source={{
                 name,
                 start_date,
                 end_date,
-                department,
                 position,
                 summary,
               }}
+              full={(projects || []).length === 0}
             />
             <ProjectSection source={projects} />
           </Container>

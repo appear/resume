@@ -4,6 +4,7 @@ export interface Theme extends Common {
     bio_tag: string
     text: string
     link: string
+    hash_tag: string
   }
 }
 

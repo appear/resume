@@ -13,22 +13,21 @@
   "careers": [
     {
       "logo": "",
-      "name": "트리플",
+      "name": "✈️ 트리플",
       "summary": "해외 여행 가이드 서비스",
-      "department": "FrontEnd Developer",
       "start_date": "2018.07",
-      "ent_date": "ing",
-      "position": "FrontEnd",
+      "end_date": "ing",
+      "position": "FrontEnd Developer",
       "projects": [
         {
-          "name": "디자인 시스템",
+          "name": "🎨 디자인 시스템",
           "start_date": "",
           "end_date": "",
           "summary": "사내에서 사용되는 TDS (Triple Design System) 을 개발하고 개선하는 작업을 하고있습니다.",
           "link": "",
           "experiences": [
-            "Lerna 환경의 모노리포 패키지 관리",
-            "Cypress 를 이용한 E2E 테스트"
+            "✅ Lerna 환경의 모노리포 패키지 관리",
+            "✅ Cypress 를 이용한 E2E 테스트"
           ],
           "tags": ["React", "Design System", "Cypress"]
         }

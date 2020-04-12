@@ -9,8 +9,7 @@ export default function useCareerQuery(): Career[] {
     query CareerQuery {
       dataJson {
         careers {
-          department
-          ent_date
+          end_date
           name
           position
           projects {
@@ -19,6 +18,8 @@ export default function useCareerQuery(): Career[] {
             name
             link
             end_date
+            experiences
+            tags
           }
           start_date
           summary

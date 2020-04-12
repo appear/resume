@@ -23,7 +23,6 @@ export type Career = {
   logo: string
   name: string
   summary: string
-  department: string
   start_date: string
   end_date: string
   position: string
