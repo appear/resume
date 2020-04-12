@@ -10,6 +10,7 @@ export type Contact = {
 }
 
 export type Project = {
+  logo: string
   name: string
   start_date: string
   end_date: string
