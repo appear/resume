@@ -1,10 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Container from '../shared/container'
 import Text from '../shared/text'
 import ProjectSection from './project-section'
 import CompanySection from './company-section'
 import useCareerQuery from '../query/use-career-query'
+
+const CareerContainer = styled.div`
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+`
 
 export default function Career() {
   const careers = useCareerQuery()
@@ -16,7 +23,7 @@ export default function Career() {
       </Text>
       {careers.map(
         ({ name, start_date, end_date, position, summary, projects }, idx) => (
-          <Container key={idx}>
+          <CareerContainer key={idx}>
             <CompanySection
               source={{
                 name,
@@ -28,7 +35,7 @@ export default function Career() {
               full={(projects || []).length === 0}
             />
             <ProjectSection source={projects} />
-          </Container>
+          </CareerContainer>
         ),
       )}
     </Container>

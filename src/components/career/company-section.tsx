@@ -9,7 +9,7 @@ import { Career } from '../types'
 const CompanyContainer = styled(Container)<{ full: boolean }>`
   display: inline-block;
   vertical-align: top;
-  width: ${({ full }) => (full ? 100 : 40)}%;
+  width: ${({ full }) => (full ? 100 : 35)}%;
 `
 
 export default function CompanySection({
@@ -23,7 +23,7 @@ export default function CompanySection({
   full: boolean
 }) {
   return (
-    <CompanyContainer full={full}>
+    <CompanyContainer full={full} padding="0 20px 0 0">
       {name && (
         <Text size={4} bold margin="0 0 2px 0">
           {name}

@@ -30,6 +30,76 @@
             "✅ Cypress 를 이용한 E2E 테스트"
           ],
           "tags": ["React", "Design System", "Cypress"]
+        },
+        {
+          "name": "🏨 호텔",
+          "start_date": "",
+          "end_date": "",
+          "summary": "호텔을 보여주고 판매하는 서비스",
+          "link": "",
+          "experiences": [
+            "✅ Lerna 환경의 모노리포 패키지 관리",
+            "✅ Cypress 를 이용한 E2E 테스트"
+          ],
+          "tags": ["NextJS", "Styled Components", "Context API", "Hooks"]
+        },
+        {
+          "name": "🎫 투어 · 티켓",
+          "start_date": "",
+          "end_date": "",
+          "summary": "호텔을 보여주고 판매하는 서비스",
+          "link": "",
+          "experiences": [
+            "✅ Lerna 환경의 모노리포 패키지 관리",
+            "✅ Cypress 를 이용한 E2E 테스트"
+          ],
+          "tags": ["NextJS", "Styled Components", "Context API", "Hooks"]
+        },
+        {
+          "name": "🧔 예약 상세",
+          "start_date": "",
+          "end_date": "",
+          "summary": "호텔을 보여주고 판매하는 서비스",
+          "link": "",
+          "experiences": [
+            "✅ Lerna 환경의 모노리포 패키지 관리",
+            "✅ Cypress 를 이용한 E2E 테스트"
+          ],
+          "tags": ["NextJS", "Styled Components", "Context API", "Hooks"]
+        }
+      ]
+    },
+    {
+      "logo": "",
+      "name": "✈️ 트립비토즈",
+      "summary": "호텔 판매 서비스",
+      "start_date": "2018.01",
+      "end_date": "2018.06",
+      "position": "FrontEnd Developer",
+      "projects": [
+        {
+          "name": "🎨 서비스 메인",
+          "start_date": "",
+          "end_date": "",
+          "summary": "사내에서 사용되는 TDS (Triple Design System) 을 개발하고 개선하는 작업을 하고있습니다.",
+          "link": "",
+          "experiences": [
+            "✅ JQuery 로 운영되던 서비스를 Vue 로 변경했습니다",
+            "✅ Vuex 를 이용하여 전역 상태관리를 구성했습니다."
+          ],
+          "tags": ["Vue", "Vuex", "Sass"]
+        },
+        {
+          "name": "🎨 직계약 시스템 어드민",
+          "start_date": "",
+          "end_date": "",
+          "summary": "호텔 매니저가 직접 룸을 관리 할 수 있는 어드민 페이지를 구성합니다.",
+          "link": "",
+          "experiences": [
+            "✅ ",
+            "✅ Vuex 를 이용하여 전역 상태관리를 구성했습니다."
+          ],
+          "tags": ["React", "Mobx", "Sass"]
         }
       ]
     }

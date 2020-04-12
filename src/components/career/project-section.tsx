@@ -3,28 +3,19 @@ import styled from 'styled-components'
 
 import Container from '../shared/container'
 import Text from '../shared/text'
+import Badge from '../shared/badge'
 import { Project } from '../types'
 import { formatDate } from './utils'
 
-const ProjectContainer = styled(Container)`
+const ProjectFrame = styled(Container)`
   display: inline-block;
   vertical-align: top;
-  width: 60%;
+  width: 65%;
 `
 
-const Tag = styled.span`
-  color: #fff;
-  padding: 3px 6px;
-  border-radius: 2px;
-  font-weight: bold;
-
-  ${({ theme }) => `
-    background: ${theme.color.hash_tag};
-    font-size: ${theme.fontSize[1]}px;
-  `};
-
+const ProjectContainer = styled.div`
   &:not(:last-child) {
-    margin-right: 5px;
+    margin-bottom: 40px;
   }
 `
 
@@ -34,13 +25,13 @@ export default function ProjectSection({ source = [] }: { source: Project[] }) {
   }
 
   return (
-    <ProjectContainer>
+    <ProjectFrame>
       {source.map(
         (
           { name, start_date, end_date, experiences = [], summary, tags = [] },
           idx,
         ) => (
-          <Container key={idx}>
+          <ProjectContainer key={idx}>
             <Text size={4} bold margin="0 0 5px 0">
               {name}
             </Text>
@@ -60,13 +51,15 @@ export default function ProjectSection({ source = [] }: { source: Project[] }) {
             {(tags || []).length > 0 && (
               <Container margin="20px 0 0 0 ">
                 {tags.map((tag, idx) => (
-                  <Tag key={idx}># {tag}</Tag>
+                  <Badge key={idx} type="hash" size={0}>
+                    # {tag}
+                  </Badge>
                 ))}
               </Container>
             )}
-          </Container>
+          </ProjectContainer>
         ),
       )}
-    </ProjectContainer>
+    </ProjectFrame>
   )
 }
