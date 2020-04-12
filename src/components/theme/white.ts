@@ -7,6 +7,7 @@ const theme: Theme = {
     backgroundColor: '#fff',
     text: '#3a3a3a',
     link: '#368fff',
+    bio_tag: '#fd2e69',
   },
 }
 

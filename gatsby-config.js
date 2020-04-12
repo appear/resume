@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Title',
-    author: 'Author',
-    introduce: 'Introduce',
+    title: 'Resume Base Gatsby',
+    introduce:
+      '3년차 프로튼엔드 개발자입니다. 가나다라마바사가나다라마바사가나다라마바사가나다라마바사가나다라마바사',
   },
   plugins: [
     `gatsby-plugin-styled-components`,

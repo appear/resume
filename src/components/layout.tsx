@@ -19,7 +19,7 @@ const ContentContainer = styled.div`
   transition: background ease 0.5s 0s;
 
   ${({ theme }) => `
-    background-color: ${theme.color.backgroundColor};
+    background-color: ${theme.color.background_color};
     color: ${theme.color.text};
   `}
 `

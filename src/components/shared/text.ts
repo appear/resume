@@ -9,6 +9,7 @@ export default styled.div<{
   margin?: Margin
   lineHeight?: number | string
   ellipsis?: boolean
+  alpha?: number
 }>`
   line-height: 1.5;
 
@@ -43,6 +44,12 @@ export default styled.div<{
   ${({ size = 2, theme }) =>
     size !== undefined &&
     `
-        font-size: ${theme.fontSize[size]}px;
+     font-size: ${theme.fontSize[size]}px;
     `}
+
+  ${({ alpha }) =>
+    alpha &&
+    `
+    opacity: ${alpha};
+  `}  
 `

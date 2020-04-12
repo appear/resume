@@ -1,8 +1,7 @@
 {
   "bio": {
-    "name": "가나다라",
-    "image": "/images/dummy.png",
-    "job_search": false
+    "name": "고석진",
+    "job_search": true
   },
   "contacts": {
     "github": "",

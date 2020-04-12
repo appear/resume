@@ -18,7 +18,6 @@ export default function useBioQuery(): MetaData & Bio {
       dataJson {
         bio {
           name
-          image
           job_search
         }
       }

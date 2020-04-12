@@ -1,6 +1,7 @@
 export interface Theme extends Common {
   color: {
-    backgroundColor: string
+    background_color: string
+    bio_tag: string
     text: string
     link: string
   }

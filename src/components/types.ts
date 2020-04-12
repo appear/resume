@@ -41,6 +41,5 @@ export type Category = {
 
 export type Bio = {
   name: string
-  image: string
   job_search: boolean
 }
