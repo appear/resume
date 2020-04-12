@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 interface HeadProps {
-  subTitle?: string
+  introduce?: string
   lang?: string
   meta?: any[]
   title: string
@@ -14,7 +14,7 @@ export default function Head({
   meta = [],
   keywords = [],
   title,
-  subTitle,
+  introduce,
 }: HeadProps) {
   return (
     <Helmet
@@ -26,7 +26,7 @@ export default function Head({
       meta={[
         {
           name: `description`,
-          content: subTitle,
+          content: introduce,
         },
         {
           property: `og:title`,
@@ -34,7 +34,7 @@ export default function Head({
         },
         {
           property: `og:description`,
-          content: subTitle,
+          content: introduce,
         },
         {
           property: `og:type`,
@@ -50,7 +50,7 @@ export default function Head({
         },
         {
           name: `twitter:description`,
-          content: subTitle,
+          content: introduce,
         },
         {
           name: 'og:type',

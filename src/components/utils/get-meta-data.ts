@@ -5,14 +5,13 @@ import { MetaData } from '../types'
 export default function getMetaData(): MetaData {
   const {
     site: {
-      siteMetadata: { title, subTitle, introduce, author },
+      siteMetadata: { title, introduce, author },
     },
   } = useStaticQuery(graphql`
     query SiteMetaData {
       site {
         siteMetadata {
           title
-          subTitle
           introduce
           author
         }
@@ -20,5 +19,5 @@ export default function getMetaData(): MetaData {
     }
   `)
 
-  return { title, subTitle, introduce, author }
+  return { title, introduce, author }
 }
