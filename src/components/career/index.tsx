@@ -5,6 +5,7 @@ import Text from '../shared/text'
 import ShadowContainer from '../shared/shadow-container'
 import ProjectSection from './project-section'
 import CompanySection from './company-section'
+import SectionTitle from '../title'
 import useCareerQuery from '../query/use-career-query'
 
 const CareerContainer = styled.div`
@@ -18,9 +19,7 @@ export default function Career() {
 
   return (
     <ShadowContainer>
-      <Text size={5} bold margin="40px 0 30px 0">
-        경력
-      </Text>
+      <SectionTitle>경력</SectionTitle>
       {careers.map(
         ({ name, start_date, end_date, position, summary, projects }, idx) => (
           <CareerContainer key={idx}>
