@@ -5,6 +5,7 @@ import Container from '../shared/container'
 import Text from '../shared/text'
 import { useThemeContext } from '../theme/theme-provider'
 import getMetaData from '../utils/get-meta-data'
+import { useContactQuery } from '../useQuery'
 
 const NavbarFrame = styled(Container)`
   height: 72px;
@@ -20,6 +21,7 @@ const ThemeButton = styled.button`
 function Navbar() {
   const { isDark, setIsDark } = useThemeContext()
   const { author } = getMetaData()
+  const contact = useContactQuery()
 
   return (
     <NavbarFrame position="relative">
