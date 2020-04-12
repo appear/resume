@@ -1,7 +1,6 @@
 export type MetaData = {
   title: string
   introduce: string
-  author: string
 }
 
 export type ContactType = 'github' | 'phone' | 'mail' | 'blog' | 'linkedIn'
@@ -38,4 +37,10 @@ export type Content = {
 export type Category = {
   name: string
   contents: Content[]
+}
+
+export type Bio = {
+  name: string
+  image: string
+  job_search: boolean
 }

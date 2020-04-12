@@ -1,8 +1,8 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { Contact } from './types'
+import { Contact } from '../types'
 
-export function useContactQuery(): Contact {
+export default function useContactQuery(): Contact {
   const {
     dataJson: { contacts },
   } = useStaticQuery(graphql`

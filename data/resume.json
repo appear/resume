@@ -1,10 +1,15 @@
 {
+  "bio": {
+    "name": "가나다라",
+    "image": "/images/dummy.png",
+    "job_search": false
+  },
   "contacts": {
     "github": "",
     "phone": "",
     "mail": "",
     "blog": "",
-    "linkedIn": ""
+    "linked_in": ""
   },
   "careers": [
     {

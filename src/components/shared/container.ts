@@ -10,7 +10,7 @@ interface ContainerProps {
   padding?: Padding
 }
 
-export const Container = styled.div<ContainerProps>`
+export default styled.div<ContainerProps>`
   box-sizing: border-box;
 
   ${margin}
@@ -18,11 +18,4 @@ export const Container = styled.div<ContainerProps>`
 
   ${({ overflow }) => overflow && `overflow: ${overflow};`}
   ${({ position }) => position && `position: ${position};`}
-`
-
-export const SectionContainer = styled(Container)`
-  max-width: 860px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
 `

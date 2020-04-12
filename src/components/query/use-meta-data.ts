@@ -2,10 +2,10 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { MetaData } from '../types'
 
-export default function getMetaData(): MetaData {
+export default function useMetaData(): MetaData {
   const {
     site: {
-      siteMetadata: { title, introduce, author },
+      siteMetadata: { title, introduce },
     },
   } = useStaticQuery(graphql`
     query SiteMetaData {
@@ -13,11 +13,10 @@ export default function getMetaData(): MetaData {
         siteMetadata {
           title
           introduce
-          author
         }
       }
     }
   `)
 
-  return { title, introduce, author }
+  return { title, introduce }
 }

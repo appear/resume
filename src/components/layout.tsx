@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 import SEO from './seo'
 import ResetStyle from './reset-style'
-import getMetaData from './utils/get-meta-data'
-import { SectionContainer } from './shared/container'
+import useMetaData from './query/use-meta-data'
+import Section from './shared/section'
 import Navbar from './navbar'
 import ThemeProvider from './theme/theme-provider'
 
@@ -25,7 +25,7 @@ const ContentContainer = styled.div`
 `
 
 const Layout = ({ children }: LayoutProps) => {
-  const { title, introduce } = getMetaData()
+  const { title, introduce } = useMetaData()
 
   return (
     <>
@@ -34,7 +34,7 @@ const Layout = ({ children }: LayoutProps) => {
       <ThemeProvider>
         <ContentContainer>
           <Navbar />
-          <SectionContainer>{children}</SectionContainer>
+          <Section>{children}</Section>
         </ContentContainer>
       </ThemeProvider>
     </>

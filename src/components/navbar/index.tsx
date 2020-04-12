@@ -1,39 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { SectionContainer } from '../shared/container'
+import Container from '../shared/container'
+import Section from '../shared/section'
 import Text from '../shared/text'
 import { useThemeContext } from '../theme/theme-provider'
-import getMetaData from '../utils/get-meta-data'
-import { useContactQuery } from '../useQuery'
-import Icon from '../shared/icon'
-import { ContactType } from '../types'
+import useBioQuery from '../query/use-bio-query'
 
-const NavbarFrame = styled(SectionContainer)`
+const NavbarFrame = styled(Section)`
   height: 72px;
 `
 
-const ThemeButton = styled.button``
+const ThemeButton = styled.button`
+  font-size: 32px;
+`
 
-const FloatContainer = styled.div``
+const FloatContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  text-align: right;
+`
 
 function Navbar() {
   const { isDark, setIsDark } = useThemeContext()
-  const { author } = getMetaData()
-  const contact = useContactQuery()
+  const { name } = useBioQuery()
 
   return (
     <NavbarFrame position="relative">
-      <Text size={6} bold lineHeight="72" ellipsis>
-        {author}
-      </Text>
+      <Container>
+        <Text size={6} lineHeight="72" bold ellipsis>
+          {name}
+        </Text>
+      </Container>
       <FloatContainer>
         <ThemeButton onClick={() => setIsDark(!isDark)}>
           {isDark ? '🌙' : '🔆'}
         </ThemeButton>
-        {Object.keys(contact).map((key) => (
-          <Icon type={key as ContactType} size={40} />
-        ))}
       </FloatContainer>
     </NavbarFrame>
   )
