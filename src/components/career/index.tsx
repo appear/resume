@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Container from '../shared/container'
 import Text from '../shared/text'
+import ShadowContainer from '../shared/shadow-container'
 import ProjectSection from './project-section'
 import CompanySection from './company-section'
 import useCareerQuery from '../query/use-career-query'
@@ -17,7 +17,7 @@ export default function Career() {
   const careers = useCareerQuery()
 
   return (
-    <Container>
+    <ShadowContainer>
       <Text size={5} bold margin="40px 0 30px 0">
         경력
       </Text>
@@ -38,6 +38,6 @@ export default function Career() {
           </CareerContainer>
         ),
       )}
-    </Container>
+    </ShadowContainer>
   )
 }
