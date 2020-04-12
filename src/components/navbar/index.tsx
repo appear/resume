@@ -1,22 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Container from '../shared/container'
+import { SectionContainer } from '../shared/container'
 import Text from '../shared/text'
 import { useThemeContext } from '../theme/theme-provider'
 import getMetaData from '../utils/get-meta-data'
 import { useContactQuery } from '../useQuery'
+import Icon from '../shared/icon'
+import { ContactType } from '../types'
 
-const NavbarFrame = styled(Container)`
+const NavbarFrame = styled(SectionContainer)`
   height: 72px;
 `
 
-const ThemeButton = styled.button`
-  font-size: 52px;
-  position: absolute;
-  top: 12px;
-  right: 0;
-`
+const ThemeButton = styled.button``
+
+const FloatContainer = styled.div``
 
 function Navbar() {
   const { isDark, setIsDark } = useThemeContext()
@@ -28,9 +27,14 @@ function Navbar() {
       <Text size={6} bold lineHeight="72" ellipsis>
         {author}
       </Text>
-      <ThemeButton onClick={() => setIsDark(!isDark)}>
-        {isDark ? '🌙' : '🔆'}
-      </ThemeButton>
+      <FloatContainer>
+        <ThemeButton onClick={() => setIsDark(!isDark)}>
+          {isDark ? '🌙' : '🔆'}
+        </ThemeButton>
+        {Object.keys(contact).map((key) => (
+          <Icon type={key as ContactType} size={40} />
+        ))}
+      </FloatContainer>
     </NavbarFrame>
   )
 }

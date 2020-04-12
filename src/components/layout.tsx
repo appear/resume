@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import SEO from './seo'
 import ResetStyle from './reset-style'
 import getMetaData from './utils/get-meta-data'
-import Container from './shared/container'
+import { SectionContainer } from './shared/container'
 import Navbar from './navbar'
 import ThemeProvider from './theme/theme-provider'
 
@@ -25,16 +25,16 @@ const ContentContainer = styled.div`
 `
 
 const Layout = ({ children }: LayoutProps) => {
-  const { title, subTitle } = getMetaData()
+  const { title, introduce } = getMetaData()
 
   return (
     <>
       <ResetStyle />
-      <SEO title={title} subTitle={subTitle} />
+      <SEO title={title} introduce={introduce} />
       <ThemeProvider>
         <ContentContainer>
           <Navbar />
-          <Container>{children}</Container>
+          <SectionContainer>{children}</SectionContainer>
         </ContentContainer>
       </ThemeProvider>
     </>

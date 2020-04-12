@@ -1,18 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-type ICON = 'github' | 'mail' | 'linkedIn'
+import { ContactType } from '../types'
 
 const ICONS: {
-  [key in ICON]?: string
+  [key in ContactType]?: string
 } = {
   github: '/images/github.png',
   mail: '/images/mail.png',
   linkedIn: '/images/linkedin.png',
+  blog: '',
+  phone: '',
 }
 
 interface IconProps {
-  type: ICON
+  type: ContactType
   size: number
 }
 
