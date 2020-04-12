@@ -2,7 +2,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { Career } from '../types'
 
-export function useCareerQuery(): Career {
+export default function useCareerQuery(): Career[] {
   const {
     dataJson: { careers },
   } = useStaticQuery(graphql`

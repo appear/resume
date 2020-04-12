@@ -10,7 +10,6 @@ export type Contact = {
 }
 
 export type Project = {
-  logo: string
   name: string
   start_date: string
   end_date: string
@@ -21,11 +20,12 @@ export type Project = {
 }
 
 export type Career = {
+  logo: string
   name: string
   summary: string
   department: string
   start_date: string
-  ent_date: string
+  end_date: string
   position: string
   projects: Project[]
 }

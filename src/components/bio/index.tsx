@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import useBioQuery from './query/use-bio-query'
-import Container from './shared/container'
-import Text from './shared/text'
+import useBioQuery from '../query/use-bio-query'
+import Container from '../shared/container'
+import Text from '../shared/text'
 
 const TextContainer = styled(Container)``
 const Badge = styled.span`
