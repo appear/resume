@@ -1,7 +1,7 @@
 {
   "bio": {
     "name": "고석진",
-    "job_search": true
+    "job_search": false
   },
   "contacts": {
     "github": "",
@@ -13,10 +13,29 @@
   "careers": [
     {
       "logo": "",
-      "name": "✈️ 트리플",
+      "name": "네이버 파이낸셜",
+      "summary": "네이버페이 서비스",
+      "start_date": "2020.09",
+      "end_date": "ing",
+      "position": "FrontEnd Developer",
+      "projects": [
+        {
+          "name": "SKT 자동납부",
+          "start_date": "",
+          "end_date": "",
+          "summary": "네이버 통장을 이용하여 SKT 통신사 요금 자동납부 서비스",
+          "link": "",
+          "experiences": [],
+          "tags": ["React"]
+        }
+      ]
+    },
+    {
+      "logo": "",
+      "name": "트리플",
       "summary": "해외 여행 가이드 서비스",
       "start_date": "2018.07",
-      "end_date": "ing",
+      "end_date": "2020.08",
       "position": "FrontEnd Developer",
       "projects": [
         {
@@ -66,86 +85,6 @@
             "✅ Cypress 를 이용한 E2E 테스트"
           ],
           "tags": ["NextJS", "Styled Components", "Context API", "Hooks"]
-        }
-      ]
-    },
-    {
-      "logo": "",
-      "name": "✈️ 트립비토즈",
-      "summary": "호텔 판매 서비스",
-      "start_date": "2018.01",
-      "end_date": "2018.06",
-      "position": "FrontEnd Developer",
-      "projects": [
-        {
-          "name": "🏨 서비스 메인",
-          "start_date": "",
-          "end_date": "",
-          "summary": "사내에서 사용되는 TDS (Triple Design System) 을 개발하고 개선하는 작업을 하고있습니다.",
-          "link": "",
-          "experiences": [
-            "✅ JQuery 로 운영되던 서비스를 Vue 로 변경했습니다",
-            "✅ Vuex 를 이용하여 전역 상태관리를 구성했습니다."
-          ],
-          "tags": ["Vue", "Vuex", "Sass"]
-        },
-        {
-          "name": "🙌 직계약 시스템 어드민",
-          "start_date": "",
-          "end_date": "",
-          "summary": "호텔 매니저가 직접 룸을 관리 할 수 있는 어드민 페이지를 구성합니다.",
-          "link": "",
-          "experiences": [
-            "✅ ",
-            "✅ Vuex 를 이용하여 전역 상태관리를 구성했습니다."
-          ],
-          "tags": ["React", "Mobx", "Sass"]
-        }
-      ]
-    },
-    {
-      "logo": "",
-      "name": "🌼 디케이테크인",
-      "summary": "호텔 판매 서비스",
-      "start_date": "2017.12",
-      "end_date": "2016.12",
-      "position": "FrontEnd Developer",
-      "projects": [
-        {
-          "name": "🗳️ 2017 대선",
-          "start_date": "",
-          "end_date": "",
-          "summary": "다음과 카카오톡에 노출될 2017 대선 컬렉션",
-          "link": "",
-          "experiences": [
-            "✅ 접근성을 고려한 시멘틱한 HTML/CSS 를 구성하였습니다.",
-            "✅ 실시간 그래프 정보 변경을 HighChart 를 이용하여 개발하였습니다."
-          ],
-          "tags": ["Javascript", "HighChart", "HTML/CSS"]
-        },
-        {
-          "name": "🎲 카카오톡 사다리타기, 제비뽑기 개선",
-          "start_date": "",
-          "end_date": "",
-          "summary": "Canvas로 구현되어있는 사다리타기, 제비뽑기 페이지 개선",
-          "link": "",
-          "experiences": [
-            "✅ 레거시한 스펙들을 제거하고 ES6 기반으로 리펙토링하였습니다.",
-            "✅ Canvas 를 이용한 모션처리"
-          ],
-          "tags": ["Javascript", "Canvas", "ES6", "HTML/CSS"]
-        },
-        {
-          "name": "🔎 S2",
-          "start_date": "",
-          "end_date": "",
-          "summary": "Kakao의 차별화된 검색 서비스를 제공하기위한 프로젝트",
-          "link": "",
-          "experiences": [
-            "✅ 레거시한 스펙들을 제거하고 ES6 기반으로 리펙토링하였습니다.",
-            "✅ Canvas 를 이용한 모션처리"
-          ],
-          "tags": ["Javascript", "AmChart", "JQuery", "HTML/CSS"]
         }
       ]
     }

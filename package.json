@@ -76,8 +76,7 @@
   },
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
-      "eslint",
-      "stylelint"
+      "eslint"
     ]
   }
 }
